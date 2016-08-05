@@ -5,7 +5,7 @@
 set -e
 
 # config
-APACHE_VERSION="2.2.23"
+APACHE_VERSION="2.4.23"
 APACHE_PATH="apache"
 PHP_VERSION="5.6.24"
 PHP_PATH="php"
@@ -32,6 +32,8 @@ fi
 
 APACHE_URL="http://ftp.unicamp.br/pub/apache//httpd/httpd-$APACHE_VERSION.tar.gz"
 echo "-----> Bundling Apache version $APACHE_VERSION"
+echo "$APACHE_URL"
+
 curl --silent --max-time 60 --location "$APACHE_URL" | tar xvz
 
 PHP_URL="http://br1.php.net/get/php-$PHP_VERSION.tar.gz/from/this/mirror"
