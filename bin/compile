@@ -64,5 +64,9 @@ EOF
 
 chmod +x boot.sh
 
+# install mail 3d party
+php/bin/pear install Mail
+php/bin/pear install Net_SMTP
+
 # clean the cache
 rm -rf $CACHE_DIR/*
